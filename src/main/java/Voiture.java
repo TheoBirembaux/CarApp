@@ -19,9 +19,7 @@ public class Voiture {
         if (this.vitesse + VALEUR_ACCELERATION <= VITESSE_MAX) {
             this.vitesse += VALEUR_ACCELERATION;
             // afficher détails
-            System.out.println("Modèle : " + this.modele);
-            System.out.println("Couleur : " + this.couleur);
-            System.out.println("Vitesse actuelle : " + this.vitesse);
+            printDetails();
         } else {
             System.out.println("La vitesse maximale est atteinte.");
         }
@@ -31,12 +29,16 @@ public class Voiture {
         if (vitesse - VALEUR_ACCELERATION >= 0) {
             vitesse -= VALEUR_ACCELERATION;
             // afficher détails
-            System.out.println("Modèle : " + this.modele);
-            System.out.println("Couleur : " + this.couleur);
-            System.out.println("Vitesse actuelle : " + this.vitesse);
+            printDetails();
         } else {
             System.out.println("La voiture est déjà à l'arrêt.");
         }
+    }
+
+    private void printDetails() {
+        System.out.println("Vitesse : " + this.vitesse);
+        System.out.println("Couleur : " + this.couleur);
+        System.out.println("Vitesse actuelle : " + this.vitesse);
     }
 }
 
