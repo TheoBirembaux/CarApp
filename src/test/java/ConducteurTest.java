@@ -19,7 +19,7 @@ public class ConducteurTest {
     @Test
     public void testDemarrerVoiture() {
         Voiture voiture = new Voiture("Sedan", "Bleu");
-        conducteur.demarrerVoiture(voiture);
+        conducteur.demarrerVoiture();
         // How to assert that the demarrerVoiture method was called?
 
     }
@@ -27,7 +27,7 @@ public class ConducteurTest {
     @Test
     public void testArreterVoiture() {
         Voiture voiture = new Voiture("Sedan", "Bleu");
-        conducteur.arreterVoiture(voiture);
+        conducteur.arreterVoiture();
         // How to assert that the arreterVoiture method was called?
     }
 
