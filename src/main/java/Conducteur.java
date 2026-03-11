@@ -13,7 +13,8 @@ public class Conducteur {
     }
 
     public void demarrerVoiture() {
-        if (estAdulte()) {
+        final boolean estAdulte = estAdulte();
+        if (estAdulte) {
             System.out.println(nom + " démarre la voiture.");
         } else {
             System.out.println("Le conducteur n'est pas assez âgé pour conduire.");
@@ -26,14 +27,16 @@ public class Conducteur {
 
     public void changerVitesse(final Voiture voiture, final int nouvelleVitesse) {
         System.out.println(nom + " change la vitesse de la voiture à " + nouvelleVitesse);
-        int vitesseActuelle;
-        if (voiture.getVitesse() >= nouvelleVitesse) {
-            while (voiture.getVitesse() > nouvelleVitesse) {
+        int vitesseActuelle  = voiture.getVitesse();
+        if (vitesseActuelle >= nouvelleVitesse) {
+            while (vitesseActuelle > nouvelleVitesse) {
                 voiture.ralentir();
+                vitesseActuelle = voiture.getVitesse();
             }
         } else  {
-            while (voiture.getVitesse() < nouvelleVitesse) {
+            while (vitesseActuelle < nouvelleVitesse) {
                 voiture.accelerer();
+                vitesseActuelle = voiture.getVitesse();
             }
         }
     }
