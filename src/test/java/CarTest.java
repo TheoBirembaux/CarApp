@@ -45,5 +45,18 @@ public class CarTest {
         car.changeSpeed(driver, 80);
         assertThat(car.getSpeed()).isEqualTo(80);
     }
+    @Test
+    public void testMaxSpeed() {
+        Driver driver = new Driver("John", 20);
+        car.changeSpeed(driver, 120);
+        assertThat(car.getSpeed()).isEqualTo(Car.MAX_SPEED);
+    }
+
+    @Test
+    public void testMinSpeed() {
+        Driver driver = new Driver("John", 20);
+        car.changeSpeed(driver, 0);
+        assertThat(car.getSpeed()).isEqualTo(0);
+    }
 }
 

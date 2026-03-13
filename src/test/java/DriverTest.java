@@ -4,17 +4,24 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class DriverTest {
 
-    private Driver driver;
+    private Driver driverAdult;
+    private Driver driverChild;
 
     @BeforeEach
     public void setUp() {
-        driver = new Driver("John", 20);
+        driverAdult = new Driver("John", 20);
+        driverChild = new Driver("Robin", 8);
     }
 
     @Test
     public void testIsAdult() {
-        assertThat(driver.isAdult()).isTrue();
+        assertThat(driverAdult.isAdult()).isTrue();
     }
 
+    @Test
+    public void testIsNotAdult() {
+        assertThat(driverChild.isAdult()).isFalse();
+    }
 }
+
 
