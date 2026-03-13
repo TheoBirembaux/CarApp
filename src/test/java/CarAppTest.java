@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class VoitureAppTest {
+public class CarAppTest {
 
     @Test
     public void testMain() {
@@ -9,3 +9,4 @@ public class VoitureAppTest {
         // Note: Testing console output is often more complex and depends on additional libraries.
     }
 }
+
