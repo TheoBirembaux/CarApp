@@ -14,14 +14,26 @@ public class DriverTest {
     }
 
     @Test
-    public void testIsAdult() {
-        assertThat(driverAdult.isAdult()).isTrue();
+    public void shouldBeAdult() {
+        // Given
+        // driverAdult is initialized
+
+        // When
+        boolean actual = driverAdult.isAdult();
+
+        // Then
+        assertThat(actual).isTrue();
     }
 
     @Test
-    public void testIsNotAdult() {
-        assertThat(driverChild.isAdult()).isFalse();
+    public void shouldNotBeAdult() {
+        // Given
+        // driverChild is initialized
+
+        // When
+        boolean actual = driverChild.isAdult();
+
+        // Then
+        assertThat(actual).isFalse();
     }
 }
-
-
